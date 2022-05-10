@@ -11,3 +11,5 @@ vajadusel: git rm -r --cached .
 4. add to github (settings from right top corner)
 5. clone in server (use Cpanel terminal, if needed)
 6. import database in cpanel
+
+You must modify wp-config.php
