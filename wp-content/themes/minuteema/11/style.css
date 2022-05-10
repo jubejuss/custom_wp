@@ -1,0 +1,272 @@
+/*
+Theme Name: Minuteema
+Author: aimar
+Author URI: https://aimar.eu
+Version: 0.1
+ */
+
+/* */
+
+body {
+ /*    */
+    font-size: 16px;
+    color: #545454;
+}
+ 
+a { text-decoration: none;}
+
+a:link, a:visited {
+    color: #4285f4;
+}
+ 
+p {
+    line-height: 1.7em;
+}
+ 
+div.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+ 
+article.post {
+    border-bottom: 4px dashed #ecf0f1;
+}
+ 
+article.post:last-of-type {
+    border-bottom: none;
+}
+ 
+.site-header {
+    border-bottom: 1px solid #dddddd
+}
+ 
+.site-footer {
+    border-top: 1px solid #dddddd
+}
+
+/* Nav Menu */
+
+/* fondiikoonide laadimine fonts kataloogist */
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('fonts/genericons-regular-webfont.eot');
+    src: url('fonts/genericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/genericons-regular-webfont.woff') format('woff'),
+         url('fonts/genericons-regular-webfont.ttf') format('truetype'),
+         url('fonts/genericons-regular-webfont.svg#genericonsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* https://codepen.io/drweb/pen/XWJQKNN autor ja muudetud selektorid */
+
+* { 
+    box-sizing:border-box;
+    font-family:"Dosis", sans-serif; 
+  }
+  
+  .main-navigation{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin:2em;
+  }
+  
+ .menu ul {
+    margin:0; //reset
+    padding:0;
+
+  }
+  
+  .menu {
+    display:flex;  
+    flex-direction:column-reverse;
+  } 
+
+  .menu > li{
+    display:block;
+    list-style-type:none;
+    text-transform:uppercase;
+  }
+  
+  .menu > li a{
+    display:flex;
+    text-align:center;
+    text-decoration:none;
+    color:#777;
+    padding:1rem;
+}
+    .menu > li a:hover{
+    background:#777;
+    color:#fff;
+  }
+
+/* current menu aktiivseks link */
+
+.menu  li.current-menu-item a:link,
+.menu  li.current-menu-item a:visited,
+.menu  li.current-page-ancestor a:link,
+.menu  li.current-page-ancestor a:visited {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+/* formaadime site lingid*/
+
+.page-layout ul {
+    display:flex;
+    list-style-type:none;
+    text-transform:uppercase;
+}
+ 
+.page-layout ul:before, .menu ul:after {
+    content: "";
+    display: flex;
+}
+ 
+.page-layout ul li {
+    list-style: none;
+    float: left;
+}
+ 
+.page-layout ul li {
+    font-size:80%;
+}
+ 
+.page-layout ul li a:link,
+.page-layout ul li a:visited {
+    text-decoration: none;
+    text-align:center;
+    text-decoration:none;
+    color:#777;
+    padding:1rem;
+}
+ 
+.page-layout ul li.current_page_item a:link,
+.page-layout ul li.current_page_item a:visited {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+.page-layout ul > li a:hover{
+    background:#777;
+    color:#fff;
+  }
+
+  @media (max-width: 800px) {
+    .page-layout ul {
+        display:none;
+         }
+  }
+
+/* meediapäringu formaat vastupidine min with */
+
+.menu-item-has-children > a:after{
+    font-family:'Genericons';
+    content: '\f431';
+    padding:1px;
+  }
+
+  nav ul li:hover > ul {
+    display:block;
+    color:#fff;
+    padding-left:2rem;
+  }
+  
+  nav ul ul {
+      display: none;
+  }
+
+  @media (min-width: 800px) {
+      .menu{
+        flex-direction:row;
+        justify-content:space-between;
+      }
+  }
+  
+  @media (min-width: 800px) {
+    nav ul ul {
+      display: none;
+      position:absolute;
+    }
+
+  }
+  
+  @media (min-width: 800px) {
+    nav ul li:hover > ul {
+      padding-left:0;
+      background:#777;
+    }
+    
+    nav ul li:hover > ul a{
+      color:#fff;
+    }
+    
+    .sub-menu{
+      li{
+        display:flex;
+        padding-right:2em;
+      }
+      
+      li:hover, li a:hover{
+        background:#ddd;
+        color:#777;
+      }
+    }
+    
+    nav ul ul ul{
+      margin:0 0 0 100%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+    
+    .menu-item-has-children .menu-item-has-children > a:after{
+      font-family:'Genericons';
+      content: '\f431';
+      padding:1px;
+      transform: rotate(-90deg);
+    }
+    
+  }
+  
+/* page  */
+
+.page-layout h2 {
+    font-size: 200%;
+}
+
+/* page-template - demolehe malli valimine  */
+
+.tdcontent {
+    border: dashed 3px #ffd35e;
+    background: #fdf5e1;
+    padding: 10px;
+}
+ 
+.tdtitle {
+    border: dashed 3px #2ecc71;
+    background: #d7fee8;
+    padding: 10px;
+}
+
+/* post meta stiil */
+
+.post-meta {
+    font-size: 90%;
+    color: #888;
+}
+ 
+p.post-meta a:link, p.post-meta a:visited {
+    color:#888;
+}
+
+/* pisipildi liigutamine */
+
+.small-thumbnail {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+ 
+.single-post-image {
+    float: left;
+    margin: 0px 12px 12px 0px;
+}
