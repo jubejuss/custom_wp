@@ -1,4 +1,0 @@
-https://vegibit.com/wordpress-theme-development-tutorial-step-by-step/
-Widgets
-
-add_action( 'the_content', 'my_thank_you_text' );

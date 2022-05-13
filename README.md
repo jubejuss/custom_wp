@@ -13,3 +13,14 @@ vajadusel: git rm -r --cached .
 6. import database in cpanel
 
 You must modify wp-config.php, and put it separately to server.
+
+\*\* Page  
+Functions  
+get_header()  
+get_footer()
+
+\*\* set first page:  
+To designate your static homepage, go to My Sites → Appearance → Customize → Homepage Settings:
+Then, under Front page displays, choose A static page. ...
+Next, on the Posts page dropdown, select the “Posts” page you created. ...
+Last, click on Publish for these changes to take effect.
